@@ -1,0 +1,1 @@
+EXEC ncudb.dbo.find_stonks_by_date '2022-12-22', 3
