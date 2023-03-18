@@ -33,7 +33,7 @@ BEGIN
         SET @front_day = IIF(@go_earlier_or_later=0, @front_day-1, @front_day+1)
         SET @to_day = IIF(@go_earlier_or_later=0, @to_day-1, @to_day+1)
     END
-
+    --如果是往前算的話，就去抓去年的開市時間，其他就是抓今年，這個是為了判斷有沒有跨年，和跨年時需要的運算變數
     IF @go_earlier_or_later=0
     BEGIN
         SELECT @year_days=total_day
@@ -46,7 +46,7 @@ BEGIN
         FROM year_calendar
         WHERE [year]=YEAR(@start_date)
     END
-
+    --先處理沒有跨年的再去加上跨年的(往前or往後)
     INSERT INTO @dates
     SELECT *
     FROM calendar
