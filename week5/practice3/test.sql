@@ -1,0 +1,1 @@
+exec ncudb.dbo.MA_calculation '2023-03-16', '2330', 240

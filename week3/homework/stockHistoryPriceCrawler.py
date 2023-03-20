@@ -41,11 +41,10 @@ api = DataLoader()
 api.login_by_token(login_token)
 for stock in taiwan50:
     df = api.taiwan_stock_daily(
-        stock_id=stock, start_date="2021-01-01", end_date="2023-03-11")
+        stock_id=stock, start_date="2023-03-11", end_date="2023-03-19")
     print("get the stock {}".format(stock))
     for i in range(0, df.shape[0]):
         data = list(df.iloc[i])
         insert_sql(data)
     print("finish stock id {}".format(stock))
 print("finish all")
-
