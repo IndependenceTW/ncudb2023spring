@@ -1,0 +1,1 @@
+SELECT * FROM ncudb.dbo.find_KD_cross('2330')
