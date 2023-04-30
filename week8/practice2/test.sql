@@ -1,0 +1,1 @@
+SELECT * FROM ncudb.dbo.GB_rule1('2330')
