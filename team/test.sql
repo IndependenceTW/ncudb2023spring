@@ -1,0 +1,1 @@
+EXEC ncudb.dbo.GB_aggregation '2330'
