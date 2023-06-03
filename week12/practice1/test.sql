@@ -1,0 +1,1 @@
+SELECT * FROM ncudb.dbo.slope_trend('2330', 0, 'Extremum_MAX') ORDER BY start_date DESC
